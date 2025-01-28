@@ -119,7 +119,7 @@ if(Firstrun == 1){
   digitalWrite(HeatPlug_PIN, 0);  //DeActivate Heatplugg
   FanSpeed=255;
   analogWrite(Fan_PIN,FanSpeed); //set fanspeed to max to cooldown fast
-  //Serial.println("Vifte KjÃ¸rer full hastighet");
+  //Serial.println("Vifte Kjører full hastighet");
    //Serial.println("Cooldown StartSequenceFinish to 0: ");
   StartSequenceFinish = 0;
   DryBurnerComplete = 0;
@@ -147,7 +147,7 @@ if (CooldownSequenceActive == 1 || ErrorState == 1){
     
 if (((unsigned long)((millis() - StartBTNPressedMillis) <= FanDry_time)) && x == 1) {
    
-  //kjÃ¸r vifte ved oppstart fÃ¸r fuel
+  //kjør vifte ved oppstart før fuel
    FanSpeed=255;
    analogWrite(Fan_PIN,FanSpeed);
    //Serial.println("Fan Runs Ventilation");
@@ -158,7 +158,7 @@ if (((unsigned long)((millis() - StartBTNPressedMillis) <= FanDry_time)) && x ==
 
 
 if (StartSequenceFinish == 1){
-   //Sjekk om start er ok og om bryter er slÃ¥tt pÃ¥
+   //Sjekk om start er ok og om bryter er slått på
    // Read Status Effekt Button, if on set value to 50%
   EffektButtonState = digitalRead(EffektBTN_PIN);
     if (EffektButtonState == 0){
@@ -198,7 +198,7 @@ if(EffektButtonState == 1) {
 
    // Serial.println("Effekt redusert");
 
-//Vifte mÃ¥ styres tilsvarende effekt /Se pÃ¥ om det kan gjÃ¸res ulinjÃ¦rt
+//Vifte må styres tilsvarende effekt /Se på om det kan gjøres ulinjært
 
 }
 
